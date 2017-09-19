@@ -18,7 +18,8 @@ const listen = (elems,event,f)=>{
 
 listen(window, 'click', (e)=>{
   let hambIncludes = e.target.className.includes('hamb');
-  if(!hambIncludes){
+  if(!hambIncludes && hambDrop.className.includes('act')){
      hambDrop.classList.toggle('hamb-drop-act');
+
   }
 })
