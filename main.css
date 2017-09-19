@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&subset=cyrillic');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+*{
+  box-sizing: border-box;
+}
+
+
+.h1{
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 6vw;
+  font-size: 6vw;
+
+  color: #FFFFFF;
+}
+
+.item{
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+
+  color: #14152D;
+}
+
+.header{
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  min-width: 320px;
+  background: url('img/h_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.header_top{
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  height: 45px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.logo{
+  width: 61px;
+  height: 23px;
+  background: url('img/logo.svg');
+  background-size: 61px 23px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_nav-item{
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 13px 0 13px;
+
+  cursor: pointer;
+}
+
+.header_nav-item::before{
+  content: ' ';
+  position: absolute;
+  left: -14px;
+  width: 1px;
+  height: 35px;
+  background: #FF0000;
+}
+
+.basket{
+  width: 25px;
+  height: 22px;
+  background: url('img/basket.svg');
+  background-size: 16px 22px;
+  background-position: 75% 40%;
+  background-repeat: no-repeat;
+  margin-right: 0;
+}
+
+.header_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: calc(100% - 45px);
+}
+
+.header_main_h1{
+  margin-bottom: 20px;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.h2{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 6vw;
+  text-align: right;
+  color: #000000;
+}
+
+.main_h2{
+  display: block;
+  margin-bottom: 200px;
+  text-align: right;
+}
+
+.b-main_h2{
+  margin-left: 6.5vw;
+  margin-top: 6.5vw;
+}
+
+.hamb{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 22px;
+}
+
+.hamb_icon{
+  width: 100%;
+  height: 4px;
+  background: #14152D;
+  border-radius: 2px;
+}
+
+.hamb-drop{
+  display:  flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: calc(100vh - 45px);
+  width: 90%;
+  right: -90%;
+  top: 45px;
+  background: #e03114;
+  transition: all 0.4s cubic-bezier(0.77,0,0.175,1);
+}
+
+.hamb-drop-act{
+  right: 0;
+}
+
+.hamb-item{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.hamb-basket{
+  margin-left: 23px;
+  margin-top: 7px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .header_nav{
+    display: none;
+  }
+
+  .hamb{
+    display: flex;
+  }
+}
