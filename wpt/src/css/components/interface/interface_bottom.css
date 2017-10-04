@@ -1,0 +1,55 @@
+.interface_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: calc($distance * 11.25);
+    &-logo{
+        width: 120px;
+        height: 15px;
+        @mixin bg_img logo_2;
+    }
+    &-title{
+        margin-top: calc($distance * 2.45);
+        text-align: center;
+    }
+    &-other{
+        margin-top: calc($distance * 4.0625);
+        font-size: calc($font_size * .666666);
+        color: $text_lig;
+    }
+    &-d_btn{
+        position: relative;
+        @mixin center-col;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 210px;
+        min-width: 150px;
+        height: 60px;
+        margin-top: calc($distance * 1.4375);
+        color: white;
+        border-radius: $btn_rad;
+        background: #131315;
+        &-span{
+            margin-left: calc($distance * 4.125);
+            font-family: $font_lato_reg;
+            &:nth-child(1){
+                font-size: calc($font_size * .66666);
+            }
+            &:nth-child(2){
+                font-size: calc($font_size * 1.17777);
+            }
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            left: 25px;
+            top: 14px;
+            width: 30px;
+            height: 30px;
+            @mixin bg_img apple2;
+            background-size: contain;
+        }
+    }
+}

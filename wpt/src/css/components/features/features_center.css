@@ -1,0 +1,86 @@
+.features_center{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: calc($distance * 14.0625);
+    border-top: $btn_border;
+    &-left{
+        width: 100%;
+        max-width: 815px;
+        min-width: 300px;
+        height: 774px;
+        margin-left: -215px;
+        margin-top: calc($distance * 7.8125);
+        @mixin bg_img iPhone;
+        background-size: contain;
+        transform: translateX(-550px);
+
+    }
+    &-rigth{
+        width: 100%;
+        max-width: 470px;
+        min-width: 300px;
+        margin-top: calc($distance * 8);
+        margin-left: calc($distance * 6.25);
+        &-title{
+            text-align: left;
+        }
+        &-p{
+            font-family: $font_lato_lig;
+            text-align: left;
+            &:not(:first-child){
+                margin-top: calc($distance * 2.5);
+            }
+        }
+    }
+    &-btns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: calc($distance * 4.75);
+        &-item{
+            @mixin center;
+            &:first-child{
+                width: 100%;
+                position: relative;
+                justify-content: flex-start;
+                max-width: 200px;
+                min-width: 130px;
+                height: 40px;
+                padding-left: calc($distance * 1.6875);
+                border-radius: $btn_rad;
+                background: $btn_blue;
+                a{
+                    font-family: $font_lato_reg;
+                    font-size: calc($font_size * .8888888);
+                    color: white;
+                }
+                &::after{
+                    content:'';
+                    position: absolute;
+                    right:20px;
+                    width: 13px;
+                    height: 13px;
+                    @mixin bg_img arrow;
+                }
+            }
+            &:last-child{
+                width: 100%;
+                max-width: 140px;
+                min-width: 100px;
+                height: 40px;
+                border: $btn_border;
+                background: $btn_tr;
+                border-radius: $btn_rad;
+                a{
+                    font-family: $font_lato_reg;
+                    font-size: calc($font_size * .8888888);
+                    color: $text_black;
+                }
+            }
+        }
+    }
+
+}
