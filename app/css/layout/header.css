@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    @mixin bg_jpg header_bg;
+    background-size: cover;
+    &-cont{
+        &-p{
+            width: 95%;
+            max-width: 770px;
+        }
+        &-btn{
+            position: relative;
+            @mixin center;
+            width: 90%;
+            max-width: 208px;
+            min-width: 180px;
+            height: 50px;
+            margin-top: calc($distance * 3.875);
+            padding-left: 10px;
+            border: $btn_border;
+            border-radius: $btn_rad;
+            font-size: calc($font_size * .888888);
+            color: $text_black;
+            background: $btn_tr;
+            cursor: pointer;
+            &::before{
+                content:'';
+                position: absolute;
+                left:35px;
+                width: 11px;
+                height: 11px;
+                @mixin bg_img play;
+            }
+        }
+        &-phone{
+            width: 370px;
+            height: 456px;
+            margin-top: calc($distance * 3.625);
+            @mixin bg_img header_iphone;
+            background-position: center top;
+        }
+    }
+}

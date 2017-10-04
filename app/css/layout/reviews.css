@@ -1,0 +1,100 @@
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background: white;
+    &-cont{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: calc($distance * 8.3125);
+        margin-bottom: calc($distance * 7.8125);
+    }
+    &-prevBtn{
+        width: 32px;
+        height: 45px;
+        margin-top: calc($distance * 2.8125);
+        @mixin bg_img prevArrow;
+    }
+    &-nextBtn{
+        width: 32px;
+        height: 45px;
+        margin-top: calc($distance * 2.8125);
+        @mixin bg_img nextArrow;
+    }
+    &-view{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 670px;
+        min-width: 280px;
+        overflow: hidden;
+        &-control_tabs{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 540px;
+            height: 133px;
+            &-item{
+                width: 90px;
+                height: 90px;
+                background-color: white;
+                filter: opacity(.2);
+                border-radius: 50%;
+                &:nth-child(1){
+                    @mixin bg_img ico1;
+                }
+                &:nth-child(2){
+                    @mixin bg_img ico2;
+                }
+                &:nth-child(3){
+                    @mixin bg_img ico3;
+                }
+                &-active{
+                    width: 130px;
+                    height: 130px;
+                    box-shadow: 25px 25px 34px rgba(0, 0, 0, 0.2);
+                    filter: opacity(1);
+                }
+            }
+        }
+    }
+}
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: calc($distance * 4.375);
+    &-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-width: 100%;
+        &-title{
+            font-family: $font_lato_lig;
+            font-size: calc($font_size * 1.7777);
+        }
+        &-p{
+            margin-top: calc($distance * 3.30);
+        }
+        &-stars{
+            width: 155px;
+            height: 25px;
+            margin-top: calc($distance * 2.125);
+            @mixin bg_img stars;
+        }
+        &-name{
+            margin-top: calc($distance * 4);
+            margin-bottom: 0;
+            font-size: calc($font_size * .66666);
+            text-transform: uppercase;
+            font-family: $font_lato_bold;
+        }
+    }
+}

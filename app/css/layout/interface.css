@@ -1,0 +1,13 @@
+.interface{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background: $grey_bg;
+    overflow: hidden;
+    &-cont{
+        max-width: 100%;
+        margin-top: calc($distance * 9);
+        margin-bottom: calc($distance * 8);
+    }
+}
