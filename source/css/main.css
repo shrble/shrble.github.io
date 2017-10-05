@@ -1,12 +1,12 @@
 /*base*/
-
 @import "base/reset";
 @import "base/fonts";
 @import "base/variables";
+@import "helpers/mixin";
 @import "base/base";
 
 /*helpers*/
-@import "helpers/mixin";
+
 /*layouts*/
 @import "layout/main";
 @import "layout/header";
@@ -14,6 +14,7 @@
 @import "layout/interface";
 @import "layout/reviews";
 @import "layout/price";
+@import "layout/footer";
 
 
 
@@ -26,3 +27,6 @@
 @import "components/interface/interface_up.css";
 @import "components/interface/interface_bottom.css";
 @import "components/form/form.css";
+@import "components/footer/footer_top.css";
+@import "components/footer/footer_bottom.css";
+@import "components/footer/footer_copyright.css";

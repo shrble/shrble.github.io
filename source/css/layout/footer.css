@@ -1,0 +1,19 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &_top-cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+  }
+  &_bottom-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1170px;
+
+  }
+}

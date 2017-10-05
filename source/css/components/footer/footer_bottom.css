@@ -1,0 +1,87 @@
+.footer_bottom{
+  &-cont{
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: calc($distance * 5.3125);
+    border-top: solid 1px rgba(39, 42, 45, 0.1);
+  }
+  &-contact{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+  }
+  &-logo{
+    width: 142px;
+    height: 15px;
+    @mixin bg_img logo;
+  }
+  &-p{
+    margin-top: calc($distance * 1.5625);
+    text-align: left;
+  }
+  &-soc_network{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: calc($distance * 2.5);
+  }
+
+    &-twitter{
+      width: 19px;
+      height: 16px;
+      @mixin bg_img twitter;
+    }
+    &-fb{
+      width: 13px;
+      height: 20px;
+      @mixin bg_img fb;
+    }
+    &-google{
+      width: 27px;
+      height: 17px;
+      @mixin bg_img google;
+    }
+    &-tumbler{
+      width: 13px;
+      height: 20px;
+      @mixin bg_img tumbler;
+    }
+    &-pinterest{
+      width: 18px;
+      height: 21px;
+      @mixin bg_img pinterest;
+    }
+    &-linkedin{
+      width: 19px;
+      height: 18px;
+      @mixin bg_img linkedin;
+    }
+    &-d_btn{
+      width: 140px;
+      height: 42px;
+      margin-top: calc($distance * 1.875);
+      @mixin bg_img d_btn;
+    }
+    &-block{
+      @mixin center;
+    }
+    &-col{
+      width: 210px;
+      &-title{
+        margin-bottom: 2px;
+        font-family: $font_lato_black;
+        font-size: calc($font_size * .8);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #26272d;
+      }
+      &-item{
+        margin-top: $distance;
+        color: #8c8f94;
+        font-family: $font_lato_reg;
+        font-size: calc($font_size * .889);
+        font-weight: 400;
+      }
+    }
+    }

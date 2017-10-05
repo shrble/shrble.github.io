@@ -51,3 +51,37 @@ a{
     text-decoration: none;
     color: $text_black;
 }
+
+.download_btn{
+    position: relative;
+    @mixin center-col;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 210px;
+    min-width: 150px;
+    height: 60px;
+    margin-top: calc($distance * 1.4375);
+    color: white;
+    border-radius: $btn_rad;
+    background: #131315;
+    &-span{
+        margin-left: calc($distance * 4.125);
+        font-family: $font_lato_reg;
+        &:nth-child(1){
+            font-size: calc($font_size * .66666);
+        }
+        &:nth-child(2){
+            font-size: calc($font_size * 1.17777);
+        }
+    }
+    &::before{
+        content:'';
+        position: absolute;
+        left: 25px;
+        top: 14px;
+        width: 30px;
+        height: 30px;
+        @mixin bg_img apple2;
+        background-size: contain;
+    }
+}
