@@ -4,6 +4,9 @@
   }
   &-form{
     margin-top: calc($distance * 3.125);
+    &-btn{
+      cursor: pointer;
+    }
   }
   &-span{
     margin-top: calc($distance * 1.875);
